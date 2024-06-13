@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        li{
+            list-style-type: none;
+        }
         .header{
             min-height: 15px;
             border-bottom: 1px solid grey;
@@ -31,13 +34,55 @@
         .logo{
             display: flex;
             align-items: center;
+            padding: 1px 20px;
+            padding-left: 5px;
         }
-        img{
+        .gambar{
+            flex-shrink: 0;
+        }
+        .gambar img{
             width: 60px;
+            height: 50px;
         }
         li.kategori{
             list-style-type: none;
             padding-left: 5px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .kebawah {
+            position: relative;
+        }
+        .kebawah > a {
+            text-decoration: none;
+            color: black;
+            padding-left: 20px;
+        }
+        .kebawah ul {
+            position: absolute;
+            display: none;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 0;
+            margin: 0;
+        }
+        .kebawah ul li {
+            text-align: left;
+            line-height: 40px;
+            padding-left: 10px;
+        }
+        .kebawah ul li a {
+            text-decoration: none;
+            color: black;
+            display: block;
+        }
+        .kebawah:hover ul {
+            display: block;
+        }
+        li.tiga:hover{
+            background-color: darkgray;
         }
     </style>
     <title>Document</title>
@@ -45,18 +90,31 @@
 <body>
     <div class="header">
         <ul class="kepala">
-            <li class="kiri">Download Eshop App</li>
-            <li class="kanan">Event</li>
-            <li class="kanan">Promo</li>
-            <li class="kanan">Rate Us</li>
-            <li class="kanan">About Us</li>
+            <li class="kiri"><a href="#">Download Eshop App</a></li>
+            <li class="kanan"><a href="#">About Us</a></li>
+            <li class="kanan"><a href="#">Rate Us</a></li>
+            <li class="kanan"><a href="#">Promo</a></li>
+            <li class="kanan"><a href="#">Event</a></li>
         </ul>
     </div>
     <div class="logo">
-        <img src="logo.png" alt="logo">
-        <ul>
-            <li class="kategori">Category</li>
-        </ul>
+        <div class="gambar">
+            <img src="logo.png" alt="logo">
+        </div>
+        <div class="kebawah">
+            <a href="#">Category</a>
+            <ul>
+                <li class="tiga"><a href="#">Fashion</a></li>
+                <li class="tiga"><a href="#">Book</a></li>
+                <li class="tiga"><a href="#">Houseware</a></li>
+                <li class="tiga"><a href="#">Gaming</a></li>
+                <li class="tiga"><a href="#">Gadget</a></li>
+                <li class="tiga"><a href="#">Electronic</a></li>
+                <li class="tiga"><a href="#">Health</a></li>
+                <li class="tiga"><a href="#">Beauty</a></li>
+                <li class="tiga"><a href="#">Toys</a></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
