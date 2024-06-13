@@ -4,11 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        
+        .header{
+            min-height: 15px;
+            border-bottom: 1px solid grey;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+        }
+        li.kiri{
+            float: left;
+            list-style-type: none;
+            padding-left: 8px;
+            font-size: small;
+            min-height: 15px;
+            line-height: 15px;
+        }
+        li.kanan{
+            float: right;
+            list-style-type: none;
+            padding-right: 8px;
+            font-size: small;
+            min-height: 15px;
+            line-height: 15px;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+        img{
+            width: 60px;
+        }
+        li.kategori{
+            list-style-type: none;
+            padding-left: 5px;
+        }
     </style>
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="header">
+        <ul class="kepala">
+            <li class="kiri">Download Eshop App</li>
+            <li class="kanan">Event</li>
+            <li class="kanan">Promo</li>
+            <li class="kanan">Rate Us</li>
+            <li class="kanan">About Us</li>
+        </ul>
+    </div>
+    <div class="logo">
+        <img src="logo.png" alt="logo">
+        <ul>
+            <li class="kategori">Category</li>
+        </ul>
+    </div>
 </body>
 </html>
