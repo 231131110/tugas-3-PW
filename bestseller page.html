@@ -35,7 +35,7 @@
             display: flex;
             align-items: center;
             padding: 1px 20px;
-            padding-left: 5px;
+            padding-left: 10px;
         }
         .gambar{
             flex-shrink: 0;
@@ -52,7 +52,6 @@
             position: relative;
             display: flex;
             align-items: center;
-            flex-direction: row;
         }
         .kebawah > a {
             text-decoration: none;
@@ -66,7 +65,6 @@
             top: 100%;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
         }
         .kebawah ul li {
             text-align: left;
@@ -76,7 +74,6 @@
         .kebawah ul li a {
             text-decoration: none;
             color: black;
-            display: block;
         }
         .kebawah:hover ul {
             display: block;
@@ -85,9 +82,9 @@
             background-color: darkgray;
         }
         .input-responsive {
-            width: 500px;
-            min-width: 40%;
-            max-width: 60%;
+            width: 900px;
+            min-width: 30%;
+            max-width: 70%;
             padding-left: 10px;
             font-size: 16px;
             margin-left: 30px;
@@ -107,18 +104,80 @@
             width: 40px;
             height: auto;
         }
-        td.sejajar{
+        td.abu{
             display: flex;
             align-items: center;
+            color: gray;
+            font-size: 14px;
         }
-        td.sejajar img{
-            margin-right: 5px;
+        td.abu img{
+            margin-right: 10px;
+            width: 30px;
+        }
+        td.emas{
+            display: flex;
+            align-items: center;
+            color: gold;
+            text-decoration: underline;
+            font-size: 14px;
+        }
+        td.emas img{
+            width: 30px;
+        }
+        td.subs{
+            color: gold;
+            text-decoration: underline;
+            font-size: 14px;
+            text-align: right;
         }
         .profile td{
             padding: 5px;
         }
         td.foto img{
-            width: 50px;
+            width: 55px;
+            height: auto;
+            padding-left: 10px;
+        }
+        td.tebal{
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        td.buyer{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        td.setting{
+            border-top: 1px solid black;
+            text-align: center;
+            font-size: 17px;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        .profile table{
+            width: 100px;
+        }
+        td.rupiah{
+            float: right;
+        }
+        td.hai{
+            position: relative;
+        }
+        td.hai img{
+            display: block;
+        }
+        .profile{
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        border: 1px solid lightgrey;
+        padding-left: 10px;
+        width: 200px;
+        }
+        .hai:hover .profile{
+        display: block;
         }
     </style>
     <title>Document</title>
@@ -169,33 +228,33 @@
                             <table>
                                 <tr>
                                    <td rowspan="2" class="foto"><img src="icon avatar.jpg" alt="profile"></td>
-                                   <td>Buyer 123</td>
+                                   <td class="buyer">Buyer 123</td>
                                 </tr>
                                 <tr>
-                                    <td class="sejajar"><img src="icon silver member.jpg" alt="silver">Silver Member</td>
+                                    <td class="abu"><img src="icon silver member.jpg" alt="silver">Silver Member</td>
                                 </tr>
                                 <tr>
-                                    <td class="sejajar"><img src="icon gold.jpg" alt="gold">Pro Member</td>
-                                    <td>Subscribe</td>
+                                    <td class="emas"><img src="icon gold.jpg" alt="gold">Pro Member</td>
+                                    <td class="subs">Subscribe</td>
                                 </tr>
                                 <tr>
-                                    <td>Free shipping, get promo every week</td>
+                                    <td class="tebal" colspan="2">Free shipping, get promo every week</td>
                                 </tr>
                                 <tr>
                                     <td>Balance</td>
-                                    <td>Rp.0</td>
+                                    <td class="rupiah">Rp.0</td>
                                 </tr>
                                 <tr>
                                     <td>My Coupon</td>
-                                    <td>Rp.0</td>
+                                    <td class="rupiah">Rp.0</td>
                                 </tr>
                                 <tr>
                                     <td>Mission</td>
-                                    <td>Rp.0</td>
+                                    <td class="rupiah">Rp.0</td>
                                 </tr>
                                 <tr>
-                                    <td>Setting</td>
-                                    <td>Log Out</td>
+                                    <td class="setting">Setting</td>
+                                    <td class="setting">Log Out</td>
                                 </tr>
                             </table>
                         </div>
