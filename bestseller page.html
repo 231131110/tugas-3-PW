@@ -44,29 +44,29 @@
             width: 60px;
             height: 50px;
         }
-        li.kategori{
-            list-style-type: none;
-            padding-left: 5px;
-        }
         a{
             text-decoration: none;
             color: black;
         }
         .kebawah {
             position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
         }
         .kebawah > a {
             text-decoration: none;
             color: black;
-            padding-left: 20px;
+            padding-left: 15px;
+            font-size: 20px;
         }
         .kebawah ul {
             position: absolute;
             display: none;
+            top: 100%;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            padding: 0;
-            margin: 0;
+            z-index: 1;
         }
         .kebawah ul li {
             text-align: left;
@@ -84,8 +84,27 @@
         li.tiga:hover{
             background-color: darkgray;
         }
+        .input-responsive {
+            width: 500px;
+            min-width: 40%;
+            max-width: 60%;
+            padding-left: 10px;
+            font-size: 16px;
+            margin-left: 30px;
+            height: 30px;
+        }
+        .kebawah > i {
+            margin-left: 20px;
+        }
+        td{
+            padding-left: 35px;
+        }
+        .ikon img{
+            width: 25px;
+        }
     </style>
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="header">
@@ -103,6 +122,7 @@
         </div>
         <div class="kebawah">
             <a href="#">Category</a>
+            <i class="fa-solid fa-caret-down"></i>
             <ul>
                 <li class="tiga"><a href="#">Fashion</a></li>
                 <li class="tiga"><a href="#">Book</a></li>
@@ -114,6 +134,17 @@
                 <li class="tiga"><a href="#">Beauty</a></li>
                 <li class="tiga"><a href="#">Toys</a></li>
             </ul>
+        </div>
+        <input type="text" class="input-responsive" placeholder="Type to search">
+        <div class="ikon">
+            <table>
+                <tr>
+                    <td><a href="#"><img src="icon rumah.jpg" alt=""></a></td>
+                    <td><a href="#"><img src="icon keranjang.jpg" alt=""></i></a></td>
+                    <td><a href="#"><img src="icon notifikasi.jpg" alt=""></a></td>
+                    <td><a href="#"><img src="icon email.jpg" alt=""></a></td>
+                </tr>
+            </table>
         </div>
     </div>
 </body>
