@@ -100,7 +100,25 @@
             padding-left: 35px;
         }
         .ikon img{
-            width: 25px;
+            height: 25px;
+            width: auto;
+        }
+        td.hai img{
+            width: 40px;
+            height: auto;
+        }
+        td.sejajar{
+            display: flex;
+            align-items: center;
+        }
+        td.sejajar img{
+            margin-right: 5px;
+        }
+        .profile td{
+            padding: 5px;
+        }
+        td.foto img{
+            width: 50px;
         }
     </style>
     <title>Document</title>
@@ -139,10 +157,49 @@
         <div class="ikon">
             <table>
                 <tr>
-                    <td><a href="#"><img src="icon rumah.jpg" alt=""></a></td>
-                    <td><a href="#"><img src="icon keranjang.jpg" alt=""></i></a></td>
-                    <td><a href="#"><img src="icon notifikasi.jpg" alt=""></a></td>
-                    <td><a href="#"><img src="icon email.jpg" alt=""></a></td>
+                    <td><a href="#"><img src="icon rumah.jpg" alt="home"></a></td>
+                    <td><a href="#"><img src="icon keranjang.jpg" alt="checkout"></i></a></td>
+                    <td><a href="#"><img src="icon notifikasi.jpg" alt="notification"></a></td>
+                    <td><a href="#"><img src="icon email.jpg" alt="email"></a></td>
+                    <td class="hai">
+                        <a href="#">
+                            <img src="icon avatar.jpg" alt="profile">
+                        </a>
+                        <div class="profile">
+                            <table>
+                                <tr>
+                                   <td rowspan="2" class="foto"><img src="icon avatar.jpg" alt="profile"></td>
+                                   <td>Buyer 123</td>
+                                </tr>
+                                <tr>
+                                    <td class="sejajar"><img src="icon silver member.jpg" alt="silver">Silver Member</td>
+                                </tr>
+                                <tr>
+                                    <td class="sejajar"><img src="icon gold.jpg" alt="gold">Pro Member</td>
+                                    <td>Subscribe</td>
+                                </tr>
+                                <tr>
+                                    <td>Free shipping, get promo every week</td>
+                                </tr>
+                                <tr>
+                                    <td>Balance</td>
+                                    <td>Rp.0</td>
+                                </tr>
+                                <tr>
+                                    <td>My Coupon</td>
+                                    <td>Rp.0</td>
+                                </tr>
+                                <tr>
+                                    <td>Mission</td>
+                                    <td>Rp.0</td>
+                                </tr>
+                                <tr>
+                                    <td>Setting</td>
+                                    <td>Log Out</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
                 </tr>
             </table>
         </div>
