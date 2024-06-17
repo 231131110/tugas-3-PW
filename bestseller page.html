@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        li{
+        body {
+            margin: 0 auto;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        li {
             list-style-type: none;
         }
-        .header{
-            min-height: 15px;
+
+        .header {
+            position: relative;
+            max-width: 100%;
+            height: 15px;
             border-bottom: 1px solid grey;
+            padding: 2px;
         }
-        ul{
+
+        ul {
             padding: 0;
             margin: 0;
         }
-        li.kiri{
+
+        li.kiri {
             float: left;
             list-style-type: none;
             padding-left: 8px;
@@ -23,7 +38,8 @@
             min-height: 15px;
             line-height: 15px;
         }
-        li.kanan{
+
+        li.kanan {
             float: right;
             list-style-type: none;
             padding-right: 8px;
@@ -31,158 +47,265 @@
             min-height: 15px;
             line-height: 15px;
         }
-        .logo{
+
+        .logo {
             display: flex;
             align-items: center;
-            padding: 1px 20px;
-            padding-left: 10px;
+            border-bottom: 1px solid grey;
+            border-radius: 15px;
         }
-        .gambar{
+
+        .gambar {
             flex-shrink: 0;
         }
-        .gambar img{
+
+        .gambar img {
             width: 60px;
             height: 50px;
         }
-        a{
+
+        a {
             text-decoration: none;
             color: black;
         }
+
         .kebawah {
             position: relative;
             display: flex;
             align-items: center;
         }
-        .kebawah > a {
+
+        .kebawah>a {
             text-decoration: none;
             color: black;
             padding-left: 15px;
             font-size: 20px;
         }
+
         .kebawah ul {
             position: absolute;
             display: none;
             top: 100%;
             min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            z-index: 1;
         }
+
         .kebawah ul li {
             text-align: left;
             line-height: 40px;
             padding-left: 10px;
         }
+
         .kebawah ul li a {
             text-decoration: none;
             color: black;
         }
+
         .kebawah:hover ul {
             display: block;
         }
-        li.tiga:hover{
+
+        li.tiga:hover {
             background-color: darkgray;
         }
+
         .input-responsive {
-            width: 900px;
-            min-width: 30%;
-            max-width: 70%;
-            padding-left: 10px;
+            width: 1000px;
+            max-width: 100%;
+            padding-left: 5px;
             font-size: 16px;
             margin-left: 30px;
             height: 30px;
         }
-        .kebawah > i {
+
+        .kebawah>i {
             margin-left: 20px;
         }
-        td{
-            padding-left: 35px;
+
+        td.halo,
+        td.hai {
+            padding-left: 25px;
         }
-        .ikon img{
+
+        .ikon {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .ikon img {
             height: 25px;
             width: auto;
         }
-        td.hai img{
+
+        .ikon .hai {
+            position: relative;
+        }
+
+        td.hai img {
             width: 40px;
             height: auto;
         }
-        td.abu{
+
+        td.abu {
             display: flex;
             align-items: center;
             color: gray;
             font-size: 14px;
         }
-        td.abu img{
+
+        td.abu img {
             margin-right: 10px;
             width: 30px;
         }
-        td.emas{
+
+        td.emas {
             display: flex;
             align-items: center;
             color: gold;
             text-decoration: underline;
             font-size: 14px;
         }
-        td.emas img{
+
+        td.emas img {
             width: 30px;
         }
-        td.subs{
+
+        td.subs {
             color: gold;
             text-decoration: underline;
             font-size: 14px;
             text-align: right;
         }
-        .profile td{
-            padding: 5px;
-        }
-        td.foto img{
+
+        td.foto img {
             width: 55px;
             height: auto;
-            padding-left: 10px;
         }
-        td.tebal{
+
+        td.tebal {
             text-decoration: underline;
             font-weight: bold;
         }
-        td.buyer{
+
+        td.buyer {
             font-size: 20px;
             font-weight: bold;
         }
-        td.setting{
+
+        td.setting {
             border-top: 1px solid black;
             text-align: center;
             font-size: 17px;
         }
-        table{
-            border-collapse: collapse;
-        }
-        .profile table{
-            width: 100px;
-        }
-        td.rupiah{
+
+        td.rupiah {
             float: right;
         }
-        td.hai{
-            position: relative;
-        }
-        td.hai img{
+
+        td.hai img {
             display: block;
         }
-        .profile{
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: white;
-        border: 1px solid lightgrey;
-        padding-left: 10px;
-        width: 200px;
+
+        .profile {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            border: 1px solid lightgrey;
+            width: 200px;
+            padding: 10px;
         }
-        .hai:hover .profile{
-        display: block;
+
+        .hai:hover .profile {
+            display: block;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        .produk-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .produk {
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            margin-left: 20px;
+            background-color: gray;
+        }
+
+        .fotoproduk {
+            position: relative;
+            width: 100%;
+            height: 200px;
+        }
+
+        .fotoproduk img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .jempol {
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            background: #ff6b6b;
+            color: white;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            display: flex;
+        }
+
+        .isi {
+            padding-left: 10px;
+            padding-bottom: 4px;
+            text-align: left;
+        }
+
+        .isi h3 {
+            margin-top: 6px;
+            font-size: 18px;
+        }
+
+        .gabung {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .harga {
+            font-size: 16px;
+        }
+
+        .rate {
+            font-size: 14px;
+            margin-right: 10px;
         }
     </style>
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <div class="header">
         <ul class="kepala">
@@ -216,10 +339,10 @@
         <div class="ikon">
             <table>
                 <tr>
-                    <td><a href="#"><img src="icon rumah.jpg" alt="home"></a></td>
-                    <td><a href="#"><img src="icon keranjang.jpg" alt="checkout"></i></a></td>
-                    <td><a href="#"><img src="icon notifikasi.jpg" alt="notification"></a></td>
-                    <td><a href="#"><img src="icon email.jpg" alt="email"></a></td>
+                    <td class="halo"><a href="#"><img src="icon rumah.jpg" alt="home"></a></td>
+                    <td class="halo"><a href="#"><img src="icon keranjang.jpg" alt="checkout"></i></a></td>
+                    <td class="halo"><a href="#"><img src="icon notifikasi.jpg" alt="notification"></a></td>
+                    <td class="halo"><a href="#"><img src="icon email.jpg" alt="email"></a></td>
                     <td class="hai">
                         <a href="#">
                             <img src="icon avatar.jpg" alt="profile">
@@ -227,8 +350,8 @@
                         <div class="profile">
                             <table>
                                 <tr>
-                                   <td rowspan="2" class="foto"><img src="icon avatar.jpg" alt="profile"></td>
-                                   <td class="buyer">Buyer 123</td>
+                                    <td rowspan="2" class="foto"><img src="icon avatar.jpg" alt="profile"></td>
+                                    <td class="buyer">Buyer 123</td>
                                 </tr>
                                 <tr>
                                     <td class="abu"><img src="icon silver member.jpg" alt="silver">Silver Member</td>
@@ -261,6 +384,141 @@
                     </td>
                 </tr>
             </table>
+        </div>
+    </div>
+    <div class="tulisan">
+        <h2>Best Seller Product</h2>
+    </div>
+    <div class="produk-container">
+        <div class="produk">
+            <div class="fotoproduk">
+                <img src="baju batik.jpg" alt="batik">
+                <div class="jempol"><i class="fas fa-thumbs-up"></i></div>
+            </div>
+            <div class="isi">
+                <h3>Baju Batik Wanita</h3>
+                <div class="gabung">
+                    <a class="price">Rp. 110.000,-</a>
+                    <a class="rate">★4.3/5</a>
+                </div>
+            </div>
+        </div>
+        <div class="produk">
+            <div class="fotoproduk">
+                <img src="baju batik.jpg" alt="batik">
+                <div class="jempol"><i class="fas fa-thumbs-up"></i></div>
+            </div>
+            <div class="isi">
+                <h3>Baju Batik Wanita</h3>
+                <div class="gabung">
+                    <a class="price">Rp. 110.000,-</a>
+                    <a class="rate">★4.3/5</a>
+                </div>
+            </div>
+        </div>
+        <div class="produk">
+            <div class="fotoproduk">
+                <img src="baju batik.jpg" alt="batik">
+                <div class="jempol"><i class="fas fa-thumbs-up"></i></div>
+            </div>
+            <div class="isi">
+                <h3>Baju Batik Wanita</h3>
+                <div class="gabung">
+                    <a class="price">Rp. 110.000,-</a>
+                    <a class="rate">★4.3/5</a>
+                </div>
+            </div>
+        </div>
+        <div class="produk">
+            <div class="fotoproduk">
+                <img src="baju batik.jpg" alt="batik">
+                <div class="jempol"><i class="fas fa-thumbs-up"></i></div>
+            </div>
+            <div class="isi">
+                <h3>Baju Batik Wanita</h3>
+                <div class="gabung">
+                    <a class="price">Rp. 110.000,-</a>
+                    <a class="rate">★4.3/5</a>
+                </div>
+            </div>
+        </div>
+        <div class="produk">
+            <div class="fotoproduk">
+                <img src="baju batik.jpg" alt="batik">
+                <div class="jempol"><i class="fas fa-thumbs-up"></i></div>
+            </div>
+            <div class="isi">
+                <h3>Baju Batik Wanita</h3>
+                <div class="gabung">
+                    <a class="price">Rp. 110.000,-</a>
+                    <a class="rate">★4.3/5</a>
+                </div>
+            </div>
+        </div>
+        <div class="produk">
+            <div class="fotoproduk">
+                <img src="baju batik.jpg" alt="batik">
+                <div class="jempol"><i class="fas fa-thumbs-up"></i></div>
+            </div>
+            <div class="isi">
+                <h3>Baju Batik Wanita</h3>
+                <div class="gabung">
+                    <a class="price">Rp. 110.000,-</a>
+                    <a class="rate">★4.3/5</a>
+                </div>
+            </div>
+        </div>
+        <div class="produk">
+            <div class="fotoproduk">
+                <img src="baju batik.jpg" alt="batik">
+                <div class="jempol"><i class="fas fa-thumbs-up"></i></div>
+            </div>
+            <div class="isi">
+                <h3>Baju Batik Wanita</h3>
+                <div class="gabung">
+                    <a class="price">Rp. 110.000,-</a>
+                    <a class="rate">★4.3/5</a>
+                </div>
+            </div>
+        </div>
+        <div class="produk">
+            <div class="fotoproduk">
+                <img src="baju batik.jpg" alt="batik">
+                <div class="jempol"><i class="fas fa-thumbs-up"></i></div>
+            </div>
+            <div class="isi">
+                <h3>Baju Batik Wanita</h3>
+                <div class="gabung">
+                    <a class="price">Rp. 110.000,-</a>
+                    <a class="rate">★4.3/5</a>
+                </div>
+            </div>
+        </div>
+        <div class="produk">
+            <div class="fotoproduk">
+                <img src="baju batik.jpg" alt="batik">
+                <div class="jempol"><i class="fas fa-thumbs-up"></i></div>
+            </div>
+            <div class="isi">
+                <h3>Baju Batik Wanita</h3>
+                <div class="gabung">
+                    <a class="price">Rp. 110.000,-</a>
+                    <a class="rate">★4.3/5</a>
+                </div>
+            </div>
+        </div>
+        <div class="produk">
+            <div class="fotoproduk">
+                <img src="baju batik.jpg" alt="batik">
+                <div class="jempol"><i class="fas fa-thumbs-up"></i></div>
+            </div>
+            <div class="isi">
+                <h3>Baju Batik Wanita</h3>
+                <div class="gabung">
+                    <a class="price">Rp. 110.000,-</a>
+                    <a class="rate">★4.3/5</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
