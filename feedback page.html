@@ -193,7 +193,7 @@
         .fotologo img{
             width: 200px;
             height: auto;
-            padding-top: 20px;
+            padding-top: 70px;
         }
         .rateus{
             text-align: center;
@@ -212,6 +212,33 @@
             text-align: center;
             color: gray;
             padding-top: 10px;
+        }
+        .feedback{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding-top: 30px;
+        }
+        textarea{
+            width: 700px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            resize: none;
+        }
+        button{
+            color: black;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            font-family: 'Times New Roman';
+        }
+        button:hover{
+            background: gray;
         }
     </style>
     <title>Document</title>
@@ -311,5 +338,17 @@
     <div class="give">
         Give Us Some Feedback to help us improve
     </div>
+    <div class="feedback">
+        <textarea id="feedback" rows="4"></textarea>
+        <button type="button" onclick="submitFeedback()">Submit</button>
+    </div>
+
+    <script>
+        function submitFeedback() {
+            var feedback = document.getElementById('feedback');
+            feedback.value = '';
+            alert('Thank you for your feedback!');
+        }
+    </script>
 </body>
 </html>
