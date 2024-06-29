@@ -253,7 +253,7 @@
             <li class="kanan"><a href="#">About Us</a></li>
             <li class="kanan"><a href="#">Rate Us</a></li>
             <li class="kanan"><a href="#">Promo</a></li>
-            <li class="kanan"><a href="#">Event</a></li>
+            <li class="kanan"><a href="event page.html">Event</a></li>
         </ul>
     </div>
     <div class="logo">
@@ -264,7 +264,7 @@
             <a href="#">Category</a>
             <i class="fa-solid fa-caret-down"></i>
             <ul>
-                <li class="tiga"><a href="#">Fashion</a></li>
+                <li class="tiga"><a href="category page.html">Fashion</a></li>
                 <li class="tiga"><a href="#">Book</a></li>
                 <li class="tiga"><a href="#">Houseware</a></li>
                 <li class="tiga"><a href="#">Gaming</a></li>
@@ -275,12 +275,12 @@
                 <li class="tiga"><a href="#">Toys</a></li>
             </ul>
         </div>
-        <input type="text" class="input-responsive" placeholder="Type to search">
+        <input type="text" class="input-responsive" id="searchInput" placeholder="Type to search">
         <div class="ikon">
             <table>
                 <tr>
-                    <td class="halo"><a href="#"><img src="icon rumah.jpg" alt="home"></a></td>
-                    <td class="halo"><a href="#"><img src="icon keranjang.jpg" alt="checkout"></i></a></td>
+                    <td class="halo"><a href="home page.html"><img src="icon rumah.jpg" alt="home"></a></td>
+                    <td class="halo"><a href="keranjang page.html"><img src="icon keranjang.jpg" alt="checkout"></i></a></td>
                     <td class="halo"><a href="#"><img src="icon notifikasi.jpg" alt="notification"></a></td>
                     <td class="halo"><a href="#"><img src="icon email.jpg" alt="email"></a></td>
                     <td class="hai">
@@ -349,6 +349,18 @@
             feedback.value = '';
             alert('Thank you for your feedback!');
         }
+        
+        function search() {
+            var input = document.getElementById('searchInput').value;
+            if (input.toLowerCase() === 'baju wanita') {
+                window.location.href = 'search page.html';
+            }
+        }
+        document.getElementById('searchInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                search();
+            }
+        });
     </script>
 </body>
 </html>

@@ -194,7 +194,7 @@
 .tracking-page .text-wrapper-18 {
     position: absolute;
     height: 45px;
-    top: 152px;
+    top: 116px;
     left: 44px;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
@@ -208,7 +208,7 @@
     position: absolute;
     width: 177px;
     height: 200px;
-    top: 255px;
+    top: 205px;
     left: 44px;
 }
 
@@ -234,7 +234,7 @@
 .tracking-page .text-wrapper-19 {
     position: absolute;
     height: 38px;
-    top: 303px;
+    top: 253px;
     left: 267px;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
@@ -247,7 +247,7 @@
 .tracking-page .text-wrapper-20 {
     position: absolute;
     height: 30px;
-    top: 308px;
+    top: 266px;
     left: 1034px;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
@@ -260,7 +260,7 @@
 .tracking-page .nama-alamat-no-HP {
     position: absolute;
     height: 120px;
-    top: 300px;
+    top: 250px;
     left: 547px;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
@@ -273,7 +273,7 @@
 .tracking-page .valencia-emily-jl {
     position: absolute;
     height: 120px;
-    top: 280px;
+    top: 230px;
     left: 669px;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
@@ -286,7 +286,7 @@
 .tracking-page .text-wrapper-21 {
     position: absolute;
     height: 120px;
-    top: 300px;
+    top: 250px;
     left: 641px;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
@@ -299,7 +299,7 @@
 .tracking-page .text-wrapper-22 {
     position: absolute;
     height: 38px;
-    top: 343px;
+    top: 293px;
     left: 267px;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
@@ -312,7 +312,7 @@
 .tracking-page .text-wrapper-23 {
     position: absolute;
     height: 23px;
-    top: 389px;
+    top: 339px;
     left: 267px;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
@@ -325,7 +325,7 @@
 .tracking-page .pembayaran-metode {
     position: absolute;
     height: 60px;
-    top: 312px;
+    top: 269px;
     left: 1034px;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
@@ -339,7 +339,7 @@
     position: absolute;
     width: 1343px;
     height: 2px;
-    top: 494px;
+    top: 484px;
     left: 49px;
     background-color: #d9d9d9;
 }
@@ -348,7 +348,7 @@
     position: absolute;
     width: 2px;
     height: 180px;
-    top: 263px;
+    top: 223px;
     left: 520px;
     background-color: #d9d9d9;
 }
@@ -357,7 +357,7 @@
     position: absolute;
     width: 2px;
     height: 180px;
-    top: 263px;
+    top: 223px;
     left: 1000px;
     background-color: #d9d9d9;
 }
@@ -550,9 +550,9 @@
         <ul class="kepala">
             <li class="kiri"><a href="#">Download Eshop App</a></li>
             <li class="kanan"><a href="#">About Us</a></li>
-            <li class="kanan"><a href="#">Rate Us</a></li>
+            <li class="kanan"><a href="feedback page.html">Rate Us</a></li>
             <li class="kanan"><a href="#">Promo</a></li>
-            <li class="kanan"><a href="#">Event</a></li>
+            <li class="kanan"><a href="event page.html">Event</a></li>
         </ul>
     </div>
     <div class="logo">
@@ -563,7 +563,7 @@
             <a href="#">Category</a>
             <i class="fa-solid fa-caret-down"></i>
             <ul>
-                <li class="tiga"><a href="#">Fashion</a></li>
+                <li class="tiga"><a href="category page.html">Fashion</a></li>
                 <li class="tiga"><a href="#">Book</a></li>
                 <li class="tiga"><a href="#">Houseware</a></li>
                 <li class="tiga"><a href="#">Gaming</a></li>
@@ -574,12 +574,12 @@
                 <li class="tiga"><a href="#">Toys</a></li>
             </ul>
         </div>
-        <input type="text" class="input-responsive" placeholder="Type to search">
+        <input type="text" class="input-responsive" id="searchInput" placeholder="Type to search">
         <div class="ikon">
             <table>
                 <tr>
-                    <td class="halo"><a href="#"><img src="icon rumah.jpg" alt="home"></a></td>
-                    <td class="halo"><a href="#"><img src="icon keranjang.jpg" alt="checkout"></i></a></td>
+                    <td class="halo"><a href="home page.html"><img src="icon rumah.jpg" alt="home"></a></td>
+                    <td class="halo"><a href="keranjang page.html"><img src="icon keranjang.jpg" alt="checkout"></i></a></td>
                     <td class="halo"><a href="#"><img src="icon notifikasi.jpg" alt="notification"></a></td>
                     <td class="halo"><a href="#"><img src="icon email.jpg" alt="email"></a></td>
                     <td class="hai">
@@ -661,5 +661,18 @@
             </div>
         </div>
       </div>
-    </body>
+      <script>
+        function search() {
+            var input = document.getElementById('searchInput').value;
+            if (input.toLowerCase() === 'baju wanita') {
+                window.location.href = 'search page.html';
+            }
+        }
+        document.getElementById('searchInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                search();
+            }
+        });
+    </script>
+</body>
 </html>

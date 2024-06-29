@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0 auto;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        li {
+            list-style-type: none;
+        }
+        .header {
+            position: relative;
+            max-width: 100%;
+            height: 15px;
+            border-bottom: 1px solid grey;
+            padding: 2px;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        li.kiri {
+            float: left;
+            list-style-type: none;
+            padding-left: 8px;
+            font-size: small;
+            min-height: 15px;
+            line-height: 15px;
+        }
+        li.kanan {
+            float: right;
+            list-style-type: none;
+            padding-right: 8px;
+            font-size: small;
+            min-height: 15px;
+            line-height: 15px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid grey;
+            border-radius: 15px;
+        }
+        .gambar {
+            flex-shrink: 0;
+        }
+        .gambar img {
+            width: 60px;
+            height: 50px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .kebawah {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .kebawah>a {
+            text-decoration: none;
+            color: black;
+            padding-left: 15px;
+            font-size: 20px;
+        }
+        .kebawah ul {
+            position: absolute;
+            display: none;
+            top: 100%;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            z-index: 1;
+        }
+        .kebawah ul li {
+            text-align: left;
+            line-height: 40px;
+            padding-left: 10px;
+        }
+        .kebawah ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        .kebawah:hover ul {
+            display: block;
+        }
+        li.tiga:hover {
+            background-color: darkgray;
+        }
+        .input-responsive {
+            width: 1000px;
+            max-width: 100%;
+            padding-left: 5px;
+            font-size: 16px;
+            margin-left: 30px;
+            height: 30px;
+        }
+        .kebawah>i {
+            margin-left: 20px;
+        }
+        td.halo,
+        td.hai {
+            padding-left: 25px;
+        }
+        .ikon {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .ikon img {
+            height: 25px;
+            width: auto;
+        }
+        .ikon .hai {
+            position: relative;
+        }
+        td.hai img {
+            width: 40px;
+            height: auto;
+        }
+        td.abu {
+            display: flex;
+            align-items: center;
+            color: gray;
+            font-size: 14px;
+        }
+        td.abu img {
+            margin-right: 10px;
+            width: 30px;
+        }
+        td.emas {
+            display: flex;
+            align-items: center;
+            color: gold;
+            text-decoration: underline;
+            font-size: 14px;
+        }
+        td.emas img {
+            width: 30px;
+        }
+        td.subs {
+            color: gold;
+            text-decoration: underline;
+            font-size: 14px;
+            text-align: right;
+        }
+        td.foto img {
+            width: 55px;
+            height: auto;
+        }
+        td.tebal {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        td.buyer {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        td.setting {
+            border-top: 1px solid black;
+            text-align: center;
+            font-size: 17px;
+        }
+        td.rupiah {
+            float: right;
+        }
+        td.hai img {
+            display: block;
+        }
+        .profile {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            border: 1px solid lightgrey;
+            width: 200px;
+            padding: 10px;
+            z-index: 1;
+        }
+        .hai:hover .profile {
+            display: block;
+        }
+        h2 {
+            margin-bottom: 10px;
+            padding-left: 40px;
+        }
+        .judulevent{
+            padding-left: 28px;
+        }
+        .judulevent td{
+            padding: 0px;
+        }
+        .judulevent img{
+            width: auto;
+            height: 70px;
+        }
+        .judulevent td.anniv{
+            font-size: 25px;
+        }
+        .judulevent td.mei{
+            color: gray;
+            line-height: 30px;
+        }
+        .isievent {
+            padding-top: 13px;
+            padding-left: 40px;
+            font-size: 20px;
+            text-align: justify;
+            padding-right: 40px;
+        }
+        .peek{
+            padding-left: 40px;
+            padding-top: 5px;
+        }
+        .brand{
+            padding-left: 40px;
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding-right: 40px;
+        }
+        .brand img{
+            width: 150px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="header">
+        <ul class="kepala">
+            <li class="kiri"><a href="#">Download Eshop App</a></li>
+            <li class="kanan"><a href="#">About Us</a></li>
+            <li class="kanan"><a href="feedback page.html">Rate Us</a></li>
+            <li class="kanan"><a href="#">Promo</a></li>
+            <li class="kanan"><a href="#">Event</a></li>
+        </ul>
+    </div>
+    <div class="logo">
+        <div class="gambar">
+            <img src="logo.png" alt="logo">
+        </div>
+        <div class="kebawah">
+            <a href="#">Category</a>
+            <i class="fa-solid fa-caret-down"></i>
+            <ul>
+                <li class="tiga"><a href="category page.html">Fashion</a></li>
+                <li class="tiga"><a href="#">Book</a></li>
+                <li class="tiga"><a href="#">Houseware</a></li>
+                <li class="tiga"><a href="#">Gaming</a></li>
+                <li class="tiga"><a href="#">Gadget</a></li>
+                <li class="tiga"><a href="#">Electronic</a></li>
+                <li class="tiga"><a href="#">Health</a></li>
+                <li class="tiga"><a href="#">Beauty</a></li>
+                <li class="tiga"><a href="#">Toys</a></li>
+            </ul>
+        </div>
+        <input type="text" id="searchInput" class="input-responsive" placeholder="Type to search">
+        <div class="ikon">
+            <table>
+                <tr>
+                    <td class="halo"><a href="home page.html"><img src="icon rumah.jpg" alt="home"></a></td>
+                    <td class="halo"><a href="keranjang page.html"><img src="icon keranjang.jpg" alt="checkout"></i></a></td>
+                    <td class="halo"><a href="#"><img src="icon notifikasi.jpg" alt="notification"></a></td>
+                    <td class="halo"><a href="#"><img src="icon email.jpg" alt="email"></a></td>
+                    <td class="hai">
+                        <a href="#">
+                            <img src="icon avatar.jpg" alt="profile">
+                        </a>
+                        <div class="profile">
+                            <table>
+                                <tr>
+                                    <td rowspan="2" class="foto"><img src="icon avatar.jpg" alt="profile"></td>
+                                    <td class="buyer">Buyer 123</td>
+                                </tr>
+                                <tr>
+                                    <td class="abu"><img src="icon silver member.jpg" alt="silver">Silver Member</td>
+                                </tr>
+                                <tr>
+                                    <td class="emas"><img src="icon gold.jpg" alt="gold">Pro Member</td>
+                                    <td class="subs">Subscribe</td>
+                                </tr>
+                                <tr>
+                                    <td class="tebal" colspan="2">Free shipping, get promo every week</td>
+                                </tr>
+                                <tr>
+                                    <td>Balance</td>
+                                    <td class="rupiah">Rp.0</td>
+                                </tr>
+                                <tr>
+                                    <td>My Coupon</td>
+                                    <td class="rupiah">Rp.0</td>
+                                </tr>
+                                <tr>
+                                    <td>Mission</td>
+                                    <td class="rupiah">Rp.0</td>
+                                </tr>
+                                <tr>
+                                    <td class="setting">Setting</td>
+                                    <td class="setting">Log Out</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="tulisan">
+        <h2>Coming-soon Event</h2>
+    </div>
+    <div class="judulevent">
+        <table>
+            <tr>
+                <td rowspan="2"><img src="logo.png" alt="fotologo"></td>
+                <td class="anniv">3rd anniversary special event</td>
+            </tr>
+            <tr>
+                <td  class="mei">29 Mei 2024</td>
+            </tr>
+        </table>
+    </div>
+    <div class="isievent">
+        EShop akan merayakan anniversary tahun ketiga pada 29 Mei mendatang. Catat tanggalnya, jangan sampai ketinggalan. Akan ada banyak diskon dari brand-brand beauty, fashion, dan lain-lainnya yang terkenal. Jangan lewatkan juga diskon gratis ongkir seluruh daerah dengan minimal belanja Rp. 0 serta voucher cashback 3% yang berlaku  untuk semua produk. Save the date, EShopers!
+    </div>
+    <div class="peek">
+        <h3>A little peek of brands</h3>
+    </div>
+    <div class="brand">
+        <img src="skintific.png" alt="skintific">
+        <img src="pinkflash.jpg" alt="pinkflash">
+        <img src="originote.jpeg" alt="originote">
+        <img src="somethinc.jpeg" alt="somethinc">
+        <img src="lockandlock.jpg" alt="lock">
+        <img src="vaseline.jpg" alt="vaseline">
+        <img src="polynia.jpeg" alt="polynia">
+        <img src="xiaomi.png" alt="xiaomi">
+        <img src="otwoo.jpeg" alt="otwoo">
+    </div>
+    <script>
+        function search() {
+            var input = document.getElementById('searchInput').value;
+            if (input.toLowerCase() === 'baju wanita') {
+                window.location.href = 'search page.html';
+            }
+        }
+        document.getElementById('searchInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                search();
+            }
+        });
+    </script>
+</body>
+</html>

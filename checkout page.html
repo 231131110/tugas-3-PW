@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="globals.css" />
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            body {
+            margin: 0 auto;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        li {
+            list-style-type: none;
+        }
+        .header {
+            position: relative;
+            max-width: 100%;
+            height: 15px;
+            border-bottom: 1px solid grey;
+            padding: 2px;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        li.kiri {
+            float: left;
+            list-style-type: none;
+            padding-left: 8px;
+            font-size: small;
+            min-height: 15px;
+            line-height: 15px;
+        }
+        li.kanan {
+            float: right;
+            list-style-type: none;
+            padding-right: 8px;
+            font-size: small;
+            min-height: 15px;
+            line-height: 15px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid grey;
+            border-radius: 15px;
+        }
+        .gambar {
+            flex-shrink: 0;
+        }
+        .gambar img {
+            width: 60px;
+            height: 50px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .kebawah {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .kebawah>a {
+            text-decoration: none;
+            color: black;
+            padding-left: 15px;
+            font-size: 20px;
+        }
+        .kebawah ul {
+            position: absolute;
+            display: none;
+            top: 100%;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            z-index: 1;
+        }
+        .kebawah ul li {
+            text-align: left;
+            line-height: 40px;
+            padding-left: 10px;
+        }
+        .kebawah ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        .kebawah:hover ul {
+            display: block;
+        }
+        li.tiga:hover {
+            background-color: darkgray;
+        }
+        .input-responsive {
+            width: 1000px;
+            max-width: 100%;
+            padding-left: 5px;
+            font-size: 16px;
+            margin-left: 30px;
+            height: 30px;
+        }
+        .kebawah>i {
+            margin-left: 20px;
+        }
+        td.halo,
+        td.hai {
+            padding-left: 25px;
+        }
+        .ikon {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .ikon img {
+            height: 25px;
+            width: auto;
+        }
+        .ikon .hai {
+            position: relative;
+        }
+        td.hai img {
+            width: 40px;
+            height: auto;
+        }
+        td.abu {
+            display: flex;
+            align-items: center;
+            color: gray;
+            font-size: 14px;
+        }
+        td.abu img {
+            margin-right: 10px;
+            width: 30px;
+        }
+        td.emas {
+            display: flex;
+            align-items: center;
+            color: gold;
+            text-decoration: underline;
+            font-size: 14px;
+        }
+        td.emas img {
+            width: 30px;
+        }
+        td.subs {
+            color: gold;
+            text-decoration: underline;
+            font-size: 14px;
+            text-align: right;
+        }
+        td.foto img {
+            width: 55px;
+            height: auto;
+        }
+        td.tebal {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        td.buyer {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        td.setting {
+            border-top: 1px solid black;
+            text-align: center;
+            font-size: 17px;
+        }
+        td.rupiah {
+            float: right;
+        }
+        td.hai img {
+            display: block;
+        }
+        .profile {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            border: 1px solid lightgrey;
+            width: 200px;
+            padding: 10px;
+            z-index: 1;
+        }
+        .hai:hover .profile {
+            display: block;
+        }
+        h2 {
+            margin-bottom: 10px;
+            padding-left: 40px;
+        }
+        
+
+.checkout-page .group-9 {
+    position: absolute;
+    width: 250px;
+    height: 279px;
+    top: 152px;
+    left: 71px;
+    background-image: url(baju-batik.png);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.checkout-page .text-wrapper-18 {
+    position: absolute;
+    height: 45px;
+    top: 194px;
+    left: 346px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.checkout-page .text-wrapper-19 {
+    position: absolute;
+    height: 45px;
+    top: 260px;
+    left: 346px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.checkout-page .text-wrapper-20 {
+    position: absolute;
+    height: 45px;
+    top: 319px;
+    left: 346px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #00000066;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.checkout-page .p {
+    position: absolute;
+    height: 27px;
+    top: 374px;
+    left: 346px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #00000066;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.checkout-page .rectangle-2 {
+    position: absolute;
+    width: 1311px;
+    height: 2px;
+    top: 507px;
+    left: 65px;
+    background-color: #d9d9d9;
+}
+
+.checkout-page .rectangle-3 {
+    position: absolute;
+    width: 300px;
+    height: 2px;
+    top: 831px;
+    left: 58px;
+    background-color: #d9d9d9;
+}
+
+.checkout-page .group-10 {
+    position: absolute;
+    width: 152px;
+    height: 219px;
+    top: 180px;
+    left: 688px;
+}
+
+.checkout-page .flexcontainer {
+    width: 112px;
+    height: 219px;
+    top: 0px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+    position: absolute;
+}
+
+.checkout-page .text {
+    position: relative;
+    align-self: stretch;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 8px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.checkout-page .span {
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 0;
+}
+
+.checkout-page .flexcontainer-2 {
+    width: 8px;
+    height: 219px;
+    top: 0;
+    left: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+    position: absolute;
+}
+
+.checkout-page .rectangle-4 {
+    position: absolute;
+    width: 2px;
+    height: 240px;
+    top: 187px;
+    left: 651px;
+    background-color: #d9d9d9;
+}
+
+.checkout-page .rectangle-5 {
+    position: absolute;
+    width: 2px;
+    height: 350px;
+    top: 553px;
+    left: 463px;
+    background-color: #d9d9d9;
+}
+
+.checkout-page .overlap-3 {
+    position: absolute;
+    width: 500px;
+    height: 45px;
+    top: 184px;
+    left: 861px;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+}
+
+.checkout-page .text-wrapper-21 {
+    position: absolute;
+    height: 30px;
+    top: 8px;
+    left: 19px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #7b7b7b;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.checkout-page .overlap-4 {
+    position: absolute;
+    width: 500px;
+    height: 45px;
+    top: 371px;
+    left: 861px;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+}
+
+.checkout-page .text-wrapper-22 {
+    top: 6px;
+    position: absolute;
+    height: 30px;
+    left: 19px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #7b7b7b;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.checkout-page .overlap-5 {
+    position: absolute;
+    width: 500px;
+    height: 45px;
+    top: 252px;
+    left: 861px;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+}
+
+.checkout-page .overlap-6 {
+    position: absolute;
+    width: 500px;
+    height: 45px;
+    top: 313px;
+    left: 861px;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+}
+
+.checkout-page .text-wrapper-23 {
+    top: 7px;
+    position: absolute;
+    height: 30px;
+    left: 19px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #7b7b7b;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.checkout-page .flexcontainer-3 {
+    width: 274px;
+    height: 116px;
+    top: 747px;
+    left: 71px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+    position: absolute;
+}
+
+.checkout-page .span-wrapper {
+    position: relative;
+    align-self: stretch;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.checkout-page .text-wrapper-24 {
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+}
+
+.checkout-page .overlap-7 {
+    position: absolute;
+    width: 285px;
+    height: 52px;
+    top: 640px;
+    left: 71px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #a8a8a8;
+}
+
+.checkout-page .text-wrapper-25 {
+    position: absolute;
+    height: 30px;
+    top: 16px;
+    left: 93px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.checkout-page .total-rp {
+    position: absolute;
+    height: 30px;
+    top: 898px;
+    left: 71px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.checkout-page .JENIS-PEMBAYARAN-COD-wrapper {
+    position: absolute;
+    width: 400px;
+    height: 67px;
+    top: 606px;
+    left: 544px;
+    border-radius: 15px;
+    border: 1px solid;
+    border-color: #a8a8a8;
+}
+
+.checkout-page .JENIS-PEMBAYARAN-COD {
+    position: absolute;
+    height: 60px;
+    top: -8px;
+    left: 14px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.checkout-page .overlap-8 {
+    position: absolute;
+    width: 364px;
+    height: 67px;
+    top: 606px;
+    left: 978px;
+    border-radius: 15px;
+}
+
+.checkout-page .rectangle-6 {
+    position: absolute;
+    width: 364px;
+    height: 67px;
+    top: 0;
+    left: 0;
+    background-color: #f1492f;
+    border-radius: 15px;
+}
+
+.checkout-page .text-wrapper-26 {
+    position: absolute;
+    height: 45px;
+    top: 17px;
+    left: 132px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.checkout-page .text-wrapper-27 {
+    position: absolute;
+    width: 816px;
+    height: 238px;
+    top: 705px;
+    left: 544px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 40px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+}   
+    .p{
+        height: 20px;
+    }
+
+        </style>
+    </head>
+    <body>
+        <div class="checkout-page">
+            <div class="header">
+                <ul class="kepala">
+                    <li class="kiri"><a href="#">Download Eshop App</a></li>
+                    <li class="kanan"><a href="#">About Us</a></li>
+                    <li class="kanan"><a href="feedback page.html">Rate Us</a></li>
+                    <li class="kanan"><a href="#">Promo</a></li>
+                    <li class="kanan"><a href="event page.html">Event</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <div class="gambar">
+                    <img src="logo.png" alt="logo">
+                </div>
+                <div class="kebawah">
+                    <a href="#">Category</a>
+                    <i class="fa-solid fa-caret-down"></i>
+                    <ul>
+                        <li class="tiga"><a href="category page.html">Fashion</a></li>
+                        <li class="tiga"><a href="#">Book</a></li>
+                        <li class="tiga"><a href="#">Houseware</a></li>
+                        <li class="tiga"><a href="#">Gaming</a></li>
+                        <li class="tiga"><a href="#">Gadget</a></li>
+                        <li class="tiga"><a href="#">Electronic</a></li>
+                        <li class="tiga"><a href="#">Health</a></li>
+                        <li class="tiga"><a href="#">Beauty</a></li>
+                        <li class="tiga"><a href="#">Toys</a></li>
+                    </ul>
+                </div>
+                <input type="text" class="input-responsive" id="searchInput" placeholder="Type to search">
+                <div class="ikon">
+                    <table>
+                        <tr>
+                            <td class="halo"><a href="home page.html"><img src="icon rumah.jpg" alt="home"></a></td>
+                            <td class="halo"><a href="keranjang page.html"><img src="icon keranjang.jpg" alt="checkout"></i></a></td>
+                            <td class="halo"><a href="#"><img src="icon notifikasi.jpg" alt="notification"></a></td>
+                            <td class="halo"><a href="#"><img src="icon email.jpg" alt="email"></a></td>
+                            <td class="hai">
+                                <a href="#">
+                                    <img src="icon avatar.jpg" alt="profile">
+                                </a>
+                                <div class="profile">
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2" class="foto"><img src="icon avatar.jpg" alt="profile"></td>
+                                            <td class="buyer">Buyer 123</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="abu"><img src="icon silver member.jpg" alt="silver">Silver Member</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="emas"><img src="icon gold.jpg" alt="gold">Pro Member</td>
+                                            <td class="subs">Subscribe</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tebal" colspan="2">Free shipping, get promo every week</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Balance</td>
+                                            <td class="rupiah">Rp.0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>My Coupon</td>
+                                            <td class="rupiah">Rp.0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mission</td>
+                                            <td class="rupiah">Rp.0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="setting">Setting</td>
+                                            <td class="setting">Log Out</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+                    <div class="group-9"></div>
+                <div class="text-wrapper-18">Baju batik wanita</div>
+                <div class="text-wrapper-19">Rp. 85.000,-</div>
+                <div class="text-wrapper-20">Quantity : 1</div>
+                <p class="p">NB : PRODUK INI HANYA BISA COD</p>
+                <div class="rectangle-2"></div>
+                <div class="rectangle-3"></div>
+                <div class="group-10">
+                    <div class="flexcontainer">
+                        <p class="text">
+                            <span class="span">Nama<br /></span>
+                        </p>
+                        <p class="text">
+                            <span class="span">Alamat<br /></span>
+                        </p>
+                        <p class="text">
+                            <span class="span">No HP<br /></span>
+                        </p>
+                        <p class="text"><span class="span">Email</span></p>
+                    </div>
+                    <div class="flexcontainer-2">
+                        <p class="text">
+                            <span class="span">:<br /></span>
+                        </p>
+                        <p class="text">
+                            <span class="span">:<br /></span>
+                        </p>
+                        <p class="text">
+                            <span class="span">:<br /></span>
+                        </p>
+                        <p class="text"><span class="span">:</span></p>
+                    </div>
+                </div>
+                <div class="rectangle-4"></div>
+                <div class="rectangle-5"></div>
+                <div class="overlap-3"><div class="text-wrapper-21">Ketik disini</div></div>
+                <div class="overlap-4"><div class="text-wrapper-22">Ketik disini</div></div>
+                <div class="overlap-5"><div class="text-wrapper-21">Ketik disini</div></div>
+                <div class="overlap-6"><div class="text-wrapper-23">Ketik disini</div></div>
+                <div class="flexcontainer-3">
+                    <p class="span-wrapper">
+                        <span class="text-wrapper-24">Harga produk &nbsp;: Rp.85.000,-<br /></span>
+                    </p>
+                    <p class="span-wrapper">
+                        <span class="text-wrapper-24">Biaya Admin&nbsp;&nbsp;&nbsp;  : Rp. 1.000,-<br /></span>
+                    </p>
+                    <p class="p"></p>
+                    <p class="span-wrapper"><span class="text-wrapper-24">Ongkos kirim&nbsp;&nbsp; : Rp. 10.000,-</span></p>
+                </div>
+                <div class="overlap-7"><div class="text-wrapper-25">VOUCHER</div></div>
+                <div class="total-rp">
+                    Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     : Rp. 96.000,-
+                </div>
+                <div class="JENIS-PEMBAYARAN-COD-wrapper">
+                    <p class="JENIS-PEMBAYARAN-COD">
+                        JENIS PEMBAYARAN : COD<br />PENGIRIMAN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        : JNT EXPRESS
+                    </p>
+                </div>
+                <div class="overlap-8">
+                    <div class="rectangle-6"></div>
+                    <div class="text-wrapper-26"><a href="checkout detail page.html">PESAN</a></div>
+                </div>
+                <p class="text-wrapper-27">
+                    Pastikan semua informasi dan data telah dibaca dan diisi dengan benar dan jelas agar tidak terjadi kesalahan
+                    pada transaksi.
+                </p>
+            </div>
+        </div>
+        <script>
+            function search() {
+                var input = document.getElementById('searchInput').value;
+                if (input.toLowerCase() === 'baju wanita') {
+                    window.location.href = 'search page.html';
+                }
+            }
+            document.getElementById('searchInput').addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    search();
+                }
+            });
+        </script>
+    </body>
+</html>

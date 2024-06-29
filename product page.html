@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0 auto;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        li {
+            list-style-type: none;
+        }
+        .header {
+            position: relative;
+            max-width: 100%;
+            height: 15px;
+            border-bottom: 1px solid grey;
+            padding: 2px;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        li.kiri {
+            float: left;
+            list-style-type: none;
+            padding-left: 8px;
+            font-size: small;
+            min-height: 15px;
+            line-height: 15px;
+        }
+        li.kanan {
+            float: right;
+            list-style-type: none;
+            padding-right: 8px;
+            font-size: small;
+            min-height: 15px;
+            line-height: 15px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid grey;
+            border-radius: 15px;
+        }
+        .gambar {
+            flex-shrink: 0;
+        }
+        .gambar img {
+            width: 60px;
+            height: 50px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .kebawah {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .kebawah>a {
+            text-decoration: none;
+            color: black;
+            padding-left: 15px;
+            font-size: 20px;
+        }
+        .kebawah ul {
+            position: absolute;
+            display: none;
+            top: 100%;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            z-index: 1;
+        }
+        .kebawah ul li {
+            text-align: left;
+            line-height: 40px;
+            padding-left: 10px;
+        }
+        .kebawah ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        .kebawah:hover ul {
+            display: block;
+        }
+        li.tiga:hover {
+            background-color: darkgray;
+        }
+        .input-responsive {
+            width: 1000px;
+            max-width: 100%;
+            padding-left: 5px;
+            font-size: 16px;
+            margin-left: 30px;
+            height: 30px;
+        }
+        .kebawah>i {
+            margin-left: 20px;
+        }
+        td.halo,
+        td.hai {
+            padding-left: 25px;
+        }
+        .ikon {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .ikon img {
+            height: 25px;
+            width: auto;
+        }
+        .ikon .hai {
+            position: relative;
+        }
+        td.hai img {
+            width: 40px;
+            height: auto;
+        }
+        td.abu {
+            display: flex;
+            align-items: center;
+            color: gray;
+            font-size: 14px;
+        }
+        td.abu img {
+            margin-right: 10px;
+            width: 30px;
+        }
+        td.emas {
+            display: flex;
+            align-items: center;
+            color: gold;
+            text-decoration: underline;
+            font-size: 14px;
+        }
+        td.emas img {
+            width: 30px;
+        }
+        td.subs {
+            color: gold;
+            text-decoration: underline;
+            font-size: 14px;
+            text-align: right;
+        }
+        td.foto img {
+            width: 55px;
+            height: auto;
+        }
+        td.tebal {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        td.buyer {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        td.setting {
+            border-top: 1px solid black;
+            text-align: center;
+            font-size: 17px;
+        }
+        td.rupiah {
+            float: right;
+        }
+        td.hai img {
+            display: block;
+        }
+        .profile {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            border: 1px solid lightgrey;
+            width: 200px;
+            padding: 10px;
+            z-index: 1;
+        }
+        .hai:hover .profile {
+            display: block;
+        }
+        .produk-container{
+            display: flex;
+        }
+        .produk {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            margin-left: 40px;
+            margin-top: 30px;
+        }
+        .fotoproduk {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        .fotoproduk img {
+            width:200px;
+            height: 200px;
+            border-radius: 10px;
+        }
+        .jempol {
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            background: #ff6b6b;
+            color: white;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            display: flex;
+        }
+        .judulproduk{
+            margin-left: 30px;
+            margin-top: 60px;
+            text-wrap: nowrap;
+        }
+        p{
+            margin: 8px 0;
+        }
+        .bajunya{
+            font-size: 30px;
+        }
+        .bintang{
+            color: orangered;
+            font-size: 20px;
+            line-height: px;
+        }
+        .harga{
+            font-size: 25px;
+        }
+        .sisa{
+            color: gray;
+        }
+        .profiltoko{
+            margin-left: 50px;
+            margin-top: 60px;
+            text-wrap: nowrap;
+        }
+        td.aturfoto{
+            border-left: 1px solid lightgray;
+            padding-left: 50px;
+        }
+        td.aturfoto img{
+            width: 70px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        td.bintanglagi{
+            text-align: center;
+            padding-left: 40px;
+            border-left: 1px solid lightgray;
+        }
+        td.tokobatik{
+            font-size: 25px;
+        }
+        td.tulisanabu{
+            color: gray;
+        }
+        .deskripsi{
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-top: 30px;
+        }
+        li.aduh{
+            list-style-type: disc;
+        }
+        table.deskripsiya{
+            width: 100%;
+        }
+        td.deskrip{
+            width: 50%;
+            font-size: 25px;
+            padding-right: 50px;
+            padding-top: 20px;
+            padding-bottom: 25px;
+            border-right: 1px solid lightgray;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+        }
+        td.skripsi{
+            width: 50%;
+            padding-left: 80px;
+            font-size: 25px;
+            border-top: 1px solid lightgray;
+            line-height: 40px;
+            border-bottom: 1px solid lightgray;
+        }
+        .tombol{
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-top: 30px;
+        }
+        table.tombolya{
+            width: 100%;
+        }
+        td.troli{
+            width: 50%;
+            text-align: center;
+            font-size: 22px;
+            border: 1px solid lightgray;
+            padding: 10px;
+            cursor: pointer;
+        }
+        td.pesan{
+            width: 50%;
+            text-align: center;
+            font-size: 22px;
+            border: 1px solid lightgray;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="header">
+        <ul class="kepala">
+            <li class="kiri"><a href="#">Download Eshop App</a></li>
+            <li class="kanan"><a href="#">About Us</a></li>
+            <li class="kanan"><a href="feedback page.html">Rate Us</a></li>
+            <li class="kanan"><a href="#">Promo</a></li>
+            <li class="kanan"><a href="event page.html">Event</a></li>
+        </ul>
+    </div>
+    <div class="logo">
+        <div class="gambar">
+            <img src="logo.png" alt="logo">
+        </div>
+        <div class="kebawah">
+            <a href="#">Category</a>
+            <i class="fa-solid fa-caret-down"></i>
+            <ul>
+                <li class="tiga"><a href="category page.html">Fashion</a></li>
+                <li class="tiga"><a href="#">Book</a></li>
+                <li class="tiga"><a href="#">Houseware</a></li>
+                <li class="tiga"><a href="#">Gaming</a></li>
+                <li class="tiga"><a href="#">Gadget</a></li>
+                <li class="tiga"><a href="#">Electronic</a></li>
+                <li class="tiga"><a href="#">Health</a></li>
+                <li class="tiga"><a href="#">Beauty</a></li>
+                <li class="tiga"><a href="#">Toys</a></li>
+            </ul>
+        </div>
+        <input type="text" id="searchInput" class="input-responsive" placeholder="Type to search">
+        <div class="ikon">
+            <table>
+                <tr>
+                    <td class="halo"><a href="home page.html"><img src="icon rumah.jpg" alt="home"></a></td>
+                    <td class="halo"><a href="keranjang page.html"><img src="icon keranjang.jpg" alt="checkout"></i></a></td>
+                    <td class="halo"><a href="#"><img src="icon notifikasi.jpg" alt="notification"></a></td>
+                    <td class="halo"><a href="#"><img src="icon email.jpg" alt="email"></a></td>
+                    <td class="hai">
+                        <a href="#">
+                            <img src="icon avatar.jpg" alt="profile">
+                        </a>
+                        <div class="profile">
+                            <table>
+                                <tr>
+                                    <td rowspan="2" class="foto"><img src="icon avatar.jpg" alt="profile"></td>
+                                    <td class="buyer">Buyer 123</td>
+                                </tr>
+                                <tr>
+                                    <td class="abu"><img src="icon silver member.jpg" alt="silver">Silver Member</td>
+                                </tr>
+                                <tr>
+                                    <td class="emas"><img src="icon gold.jpg" alt="gold">Pro Member</td>
+                                    <td class="subs">Subscribe</td>
+                                </tr>
+                                <tr>
+                                    <td class="tebal" colspan="2">Free shipping, get promo every week</td>
+                                </tr>
+                                <tr>
+                                    <td>Balance</td>
+                                    <td class="rupiah">Rp.0</td>
+                                </tr>
+                                <tr>
+                                    <td>My Coupon</td>
+                                    <td class="rupiah">Rp.0</td>
+                                </tr>
+                                <tr>
+                                    <td>Mission</td>
+                                    <td class="rupiah">Rp.0</td>
+                                </tr>
+                                <tr>
+                                    <td class="setting">Setting</td>
+                                    <td class="setting">Log Out</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="produk-container">
+        <div class="produk">
+            <div class="fotoproduk">
+                <img src="baju batik.jpg" alt="batik">
+                <div class="jempol"><i class="fas fa-thumbs-up"></i></div>
+            </div>
+        </div>
+        <div class="judulproduk">
+            <a class="bajunya">Baju batik wanita warna cokelat</a>
+            <p class="bintang"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half"></i></p>
+            <p class="harga">Rp. 85.000,-</p>
+            <p class="sisa">64 buah tersisa</p>
+        </div>
+        <div class="profiltoko">
+            <table>
+                <tr>
+                    <td rowspan="2" class="aturfoto"><a href="biodata store page.html"><img src="fotoprofile.jpg" alt=""></a></td>
+                    <td class="tokobatik"><a href="biodata store page.html">Toko Batik Arina</a></td>
+                </tr>
+                <tr>
+                    <td class="tulisanabu">100 pengikut</td>
+                </tr>
+                <tr>
+                    <td class="bintanglagi">★ 4.8/5</td>
+                    <td class="tulisanabu">Jakarta Pusat</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="deskripsi">
+        <table class="deskripsiya">
+            <tr>
+                <td class="deskrip">Tampilkan keanggunan dan keindahan budaya Indonesia dengan Baju Batik Wanita Warna Coklat kami. Dirancang dengan detail yang halus dan warna coklat yang hangat, baju batik ini memancarkan pesona klasik dan keanggunan yang tak lekang oleh waktu.Kain katun berkualitas tinggi memberikan kenyamanan sepanjang hari, sementara motif batik yang elegan menambahkan sentuhan tradisional yang memesona. Potongan yang feminin dan fit yang pas akan menonjolkan keanggunan setiap gerakan Anda.</td>
+                <td class="skripsi">
+                    Fitur Produk:
+                    <ul>
+                        <li class="aduh">Bahan: Katun kualitas tinggi</li>
+                        <li class="aduh">Motif: Batik tradisional sentuhan modern</li>
+                        <li class="aduh">Warna: Coklat hangat</li> 
+                        <li class="aduh">Potongan: Feminin dengan detail yang halus</li>
+                        <li class="aduh">Perawatan: Mudah dirawat, bisa dicuci mesin</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tombol">
+        <table class="tombolya">
+            <tr>
+                <td class="troli"><a href="keranjang page.html">Tambahkan ke troli</a></td>
+                <td class="pesan"><a href="checkout page.html">Pesan sekarang</a></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function search() {
+            var input = document.getElementById('searchInput').value;
+            if (input.toLowerCase() === 'baju wanita') {
+                window.location.href = 'search page.html';
+            }
+        }
+        document.getElementById('searchInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                search();
+            }
+        });
+    </script>
+</body>
+</html>

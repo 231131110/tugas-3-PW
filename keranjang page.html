@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="globals.css" />
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            body {
+            margin: 0 auto;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        li {
+            list-style-type: none;
+        }
+        .header {
+            position: relative;
+            max-width: 100%;
+            height: 15px;
+            border-bottom: 1px solid grey;
+            padding: 2px;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        li.kiri {
+            float: left;
+            list-style-type: none;
+            padding-left: 8px;
+            font-size: small;
+            min-height: 15px;
+            line-height: 15px;
+        }
+        li.kanan {
+            float: right;
+            list-style-type: none;
+            padding-right: 8px;
+            font-size: small;
+            min-height: 15px;
+            line-height: 15px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid grey;
+            border-radius: 15px;
+        }
+        .gambar {
+            flex-shrink: 0;
+        }
+        .gambar img {
+            width: 60px;
+            height: 50px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .kebawah {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .kebawah>a {
+            text-decoration: none;
+            color: black;
+            padding-left: 15px;
+            font-size: 20px;
+        }
+        .kebawah ul {
+            position: absolute;
+            display: none;
+            top: 100%;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            z-index: 1;
+        }
+        .kebawah ul li {
+            text-align: left;
+            line-height: 40px;
+            padding-left: 10px;
+        }
+        .kebawah ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        .kebawah:hover ul {
+            display: block;
+        }
+        li.tiga:hover {
+            background-color: darkgray;
+        }
+        .input-responsive {
+            width: 1000px;
+            max-width: 100%;
+            padding-left: 5px;
+            font-size: 16px;
+            margin-left: 30px;
+            height: 30px;
+        }
+        .kebawah>i {
+            margin-left: 20px;
+        }
+        td.halo,
+        td.hai {
+            padding-left: 25px;
+        }
+        .ikon {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .ikon img {
+            height: 25px;
+            width: auto;
+        }
+        .ikon .hai {
+            position: relative;
+        }
+        td.hai img {
+            width: 40px;
+            height: auto;
+        }
+        td.abu {
+            display: flex;
+            align-items: center;
+            color: gray;
+            font-size: 14px;
+        }
+        td.abu img {
+            margin-right: 10px;
+            width: 30px;
+        }
+        td.emas {
+            display: flex;
+            align-items: center;
+            color: gold;
+            text-decoration: underline;
+            font-size: 14px;
+        }
+        td.emas img {
+            width: 30px;
+        }
+        td.subs {
+            color: gold;
+            text-decoration: underline;
+            font-size: 14px;
+            text-align: right;
+        }
+        td.foto img {
+            width: 55px;
+            height: auto;
+        }
+        td.tebal {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        td.buyer {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        td.setting {
+            border-top: 1px solid black;
+            text-align: center;
+            font-size: 17px;
+        }
+        td.rupiah {
+            float: right;
+        }
+        td.hai img {
+            display: block;
+        }
+        .profile {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            border: 1px solid lightgrey;
+            width: 200px;
+            padding: 10px;
+            z-index: 1;
+        }
+        .hai:hover .profile {
+            display: block;
+        }
+        h2 {
+            margin-bottom: 10px;
+            padding-left: 40px;
+        }
+
+
+.otw-checkout-page .polygon {
+    position: relative;
+    width: 12.99px;
+    height: 11.25px;
+}
+
+.otw-checkout-page .frame-10 {
+    position: absolute;
+    width: 194px;
+    height: 356px;
+    top: 53px;
+    left: 0;
+}
+
+.otw-checkout-page .frame-11 {
+    display: flex;
+    width: 194px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.otw-checkout-page .frame-12 {
+    display: flex;
+    width: 194px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1px 14px;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.otw-checkout-page .frame-13 {
+    display: flex;
+    width: 194px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1px 14px;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.otw-checkout-page .frame-14 {
+    display: flex;
+    width: 194px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1px 14px;
+    position: absolute;
+    top: 118px;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.otw-checkout-page .frame-15 {
+    display: flex;
+    width: 194px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1px 14px;
+    position: absolute;
+    top: 238px;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.otw-checkout-page .frame-16 {
+    display: flex;
+    width: 194px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1px 14px;
+    position: absolute;
+    top: 278px;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.otw-checkout-page .frame-17 {
+    display: flex;
+    width: 194px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1px 14px;
+    position: absolute;
+    top: 158px;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.otw-checkout-page .frame-18 {
+    display: flex;
+    width: 194px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1px 14px;
+    position: absolute;
+    top: 198px;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.otw-checkout-page .frame-19 {
+    display: flex;
+    width: 194px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 14px;
+    position: absolute;
+    top: 318px;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.otw-checkout-page .overlap-3 {
+    position: absolute;
+    width: 634px;
+    height: 741px;
+    top: 156px;
+    left: 58px;
+    background-color: #ffffffcc;
+    border-radius: 20px;
+    border: 1px solid;
+    border-color: #000000;
+}
+
+.otw-checkout-page .overlap-4 {
+    position: absolute;
+    width: 172px;
+    height: 176px;
+    top: 70px;
+    left: 71px;
+}
+
+.otw-checkout-page .group-9 {
+    position: absolute;
+    width: 156px;
+    height: 174px;
+    top: 2px;
+    left: 0;
+    background-image: url(baju-batik.png);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.otw-checkout-page .mask-group {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    top: 0;
+    left: 139px;
+}
+
+.otw-checkout-page .text-wrapper-13 {
+    position: absolute;
+    width: 136px;
+    height: 23px;
+    top: 98px;
+    left: 248px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.otw-checkout-page .text-wrapper-14 {
+    position: absolute;
+    height: 23px;
+    top: 134px;
+    left: 248px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.otw-checkout-page .star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 169px;
+    left: 248px;
+}
+
+.otw-checkout-page .text-wrapper-15 {
+    height: 15px;
+    top: 166px;
+    left: 263px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    font-size: 10px;
+    position: absolute;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.otw-checkout-page .toko-batik {
+    height: 30px;
+    top: 25px;
+    left: 64px;
+    font-size: 20px;
+    position: absolute;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.otw-checkout-page .rectangle-2 {
+    position: absolute;
+    width: 24px;
+    height: 23px;
+    top: 28px;
+    left: 24px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #000000;
+}
+
+.otw-checkout-page .box {
+    position: absolute;
+    width: 24px;
+    height: 23px;
+    top: 135px;
+    left: 24px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #000000;
+    transition: background-color 0.3s;
+}
+
+.otw-checkout-page .overlap-5 {
+    position: absolute;
+    width: 32px;
+    height: 30px;
+    top: 121px;
+    left: 507px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #000000;
+}
+
+.otw-checkout-page .text-wrapper-16 {
+    position: absolute;
+    height: 21px;
+    top: 5px;
+    left: 12px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.otw-checkout-page .text-wrapper-17 {
+    height: 38px;
+    top: 123px;
+    left: 565px;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: 25px;
+    position: absolute;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.otw-checkout-page .text-wrapper-18 {
+    height: 38px;
+    top: 120px;
+    left: 471px;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: 25px;
+    position: absolute;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.otw-checkout-page .rectangle-4 {
+    position: absolute;
+    width: 634px;
+    height: 2px;
+    top: 279px;
+    left: -1px;
+    background-color: #000000;
+}
+
+.otw-checkout-page .overlap-6 {
+    position: absolute;
+    width: 443px;
+    height: 78px;
+    top: 617px;
+    left: 95px;
+    border-radius: 15px;
+}
+
+.otw-checkout-page .text-wrapper-24 {
+    position: absolute;
+    height: 26px;
+    top: 112px;
+    left: 61px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.otw-checkout-page .text-wrapper-25 {
+    position: absolute;
+    height: 26px;
+    top: 112px;
+    left: 747px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.otw-checkout-page .toko-batik-wrapper {
+    position: absolute;
+    width: 634px;
+    height: 741px;
+    top: 156px;
+    left: 744px;
+    background-color: #ffffffcc;
+    border-radius: 20px;
+    border: 1px solid;
+    border-color: #000000;
+}
+
+.otw-checkout-page .toko-batik-3 {
+    position: absolute;
+    height: 60px;
+    top: 339px;
+    left: 107px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.checkoutnow{
+    position: absolute;
+    border: 1px solid #000000;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+    top: 650px;
+    left: 250px;
+    background-color: orangered;
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="otw-checkout-page">
+            <div class="header">
+                <ul class="kepala">
+                    <li class="kiri"><a href="#">Download Eshop App</a></li>
+                    <li class="kanan"><a href="#">About Us</a></li>
+                    <li class="kanan"><a href="feedback page.html">Rate Us</a></li>
+                    <li class="kanan"><a href="#">Promo</a></li>
+                    <li class="kanan"><a href="event page.html">Event</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <div class="gambar">
+                    <img src="logo.png" alt="logo">
+                </div>
+                <div class="kebawah">
+                    <a href="#">Category</a>
+                    <i class="fa-solid fa-caret-down"></i>
+                    <ul>
+                        <li class="tiga"><a href="category page.html">Fashion</a></li>
+                        <li class="tiga"><a href="#">Book</a></li>
+                        <li class="tiga"><a href="#">Houseware</a></li>
+                        <li class="tiga"><a href="#">Gaming</a></li>
+                        <li class="tiga"><a href="#">Gadget</a></li>
+                        <li class="tiga"><a href="#">Electronic</a></li>
+                        <li class="tiga"><a href="#">Health</a></li>
+                        <li class="tiga"><a href="#">Beauty</a></li>
+                        <li class="tiga"><a href="#">Toys</a></li>
+                    </ul>
+                </div>
+                <input type="text" class="input-responsive" id="searchInput" placeholder="Type to search">
+                <div class="ikon">
+                    <table>
+                        <tr>
+                            <td class="halo"><a href="home page.html"><img src="icon rumah.jpg" alt="home"></a></td>
+                            <td class="halo"><a href="#"><img src="icon keranjang.jpg" alt="checkout"></i></a></td>
+                            <td class="halo"><a href="#"><img src="icon notifikasi.jpg" alt="notification"></a></td>
+                            <td class="halo"><a href="#"><img src="icon email.jpg" alt="email"></a></td>
+                            <td class="hai">
+                                <a href="#">
+                                    <img src="icon avatar.jpg" alt="profile">
+                                </a>
+                                <div class="profile">
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2" class="foto"><img src="icon avatar.jpg" alt="profile"></td>
+                                            <td class="buyer">Buyer 123</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="abu"><img src="icon silver member.jpg" alt="silver">Silver Member</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="emas"><img src="icon gold.jpg" alt="gold">Pro Member</td>
+                                            <td class="subs">Subscribe</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tebal" colspan="2">Free shipping, get promo every week</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Balance</td>
+                                            <td class="rupiah">Rp.0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>My Coupon</td>
+                                            <td class="rupiah">Rp.0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mission</td>
+                                            <td class="rupiah">Rp.0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="setting">Setting</td>
+                                            <td class="setting">Log Out</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+                <div class="overlap-3">
+                    <div class="overlap-4">
+                        <div class="group-9"></div>
+                        <img class="mask-group" src="jempol.jpg" />
+                    </div>
+                    <div class="text-wrapper-13">Baju batik wanita</div>
+                    <div class="text-wrapper-14">Rp. 85.000,-</div>
+                    <img class="star" src="star.png" />
+                    <div class="text-wrapper-15">4.5/5</div>
+                    <div class="toko-batik">Toko Batik Arina</div>
+                    <div class="rectangle-2"></div>
+                    <div class="box" id="colorBox"></div>
+                    <div class="overlap-5"><div class="text-wrapper-16">1</div></div>
+                    <div class="text-wrapper-17">+</div>
+                    <div class="text-wrapper-18">-</div>
+                    <div class="rectangle-4"></div>
+                    <div class="overlap-6"></div>
+                    <div class="checkoutnow"><a href="checkout page.html">CHECKOUT</a></div>
+                </div>
+                
+                <div class="text-wrapper-24">Checkout</div>
+                <div class="text-wrapper-25">Daftar Pesanan</div>
+                <div class="toko-batik-wrapper"><div class="toko-batik-3">Belum Ada Pesanan</div></div>
+            </div>
+        </div>
+        <script>
+            const box = document.getElementById('colorBox');
+            let isGreen = false;
+    
+            box.addEventListener('click', () => {
+                if (!isGreen) {
+                    box.style.backgroundColor = 'green';
+                    isGreen = true;
+                } else {
+                    box.style.backgroundColor = 'white';
+                    isGreen = false;
+                }
+            });
+            function search() {
+                var input = document.getElementById('searchInput').value;
+                if (input.toLowerCase() === 'baju wanita') {
+                    window.location.href = 'search page.html';
+                }
+            }
+            document.getElementById('searchInput').addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    search();
+                }
+            });
+    </script>
+    </body>
+</html>
